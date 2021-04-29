@@ -6,9 +6,10 @@
 #
 #    http://shiny.rstudio.com/
 #
-
+#library ####
 library(shiny)
 
+#ui #####
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
@@ -31,7 +32,7 @@ ui <- fluidPage(
         )
     )
 )
-
+#server ####
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
@@ -44,6 +45,6 @@ server <- function(input, output) {
         hist(x, breaks = bins, col = 'darkgray', border = 'white')
     })
 }
-
+#run the app ####
 # Run the application 
 shinyApp(ui = ui, server = server)
