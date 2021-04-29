@@ -8,7 +8,7 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel("sidebar panel"),
-    mainPanel("main panel")
+    mainPanel("main panel"), position = c("right")
   )
   
 )
