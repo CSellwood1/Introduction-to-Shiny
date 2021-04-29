@@ -1,6 +1,9 @@
 #how to lay out a user-interface
 library(shiny)
 
+#read an image in
+wfarm <- base64enc::dataURI(file="www/UKwindfarm.png", mime="image/png")#add it to ui to print it
+
 # Define UI ----
 ui <- fluidPage(
   #add a title panel
@@ -13,8 +16,9 @@ ui <- fluidPage(
     h1("This is the main heading for my app"),
     h2("here is a subheading"),
     p("This website will be to help planners assess potential windfarm development areas in Cumbria, and achieve a" ,strong("balance"), "between different",em("interest groups"),
-"and other users."))
-    
+"and other users.")),
+#add image
+img(src=wfarm)
 )
 
 # Define server logic ----
