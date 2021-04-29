@@ -8,8 +8,10 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel("sidebar panel"),
-    mainPanel("main panel"), position = c("right")
-  )
+    mainPanel("main panel"), position = c("right")),
+  mainPanel(
+    h1("This is the main heading for my app"),
+    h2("here is a subheading"))
   
 )
 
