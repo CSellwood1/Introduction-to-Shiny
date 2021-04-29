@@ -12,7 +12,14 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel("sidebar panel",
                  h3("a button"),
-                 actionButton(inputId = "my_submitstatus", label = "Submit")),
+                 actionButton(inputId = "my_submitstatus", label = "Submit"),
+    checkboxGroupInput(inputId = "my_checkgroup", 
+                       h3("Checkbox group"), 
+                       choices = list("Woodland" = 1, 
+                                      "Grassland" = 2, 
+                                      "Urban" = 3),
+                       selected = 1)),
+    
     mainPanel("main panel"), position = c("right")),
   mainPanel(
     h1("This is the main heading for my app"),
