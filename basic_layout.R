@@ -12,7 +12,8 @@ ui <- fluidPage(
   mainPanel(
     h1("This is the main heading for my app"),
     h2("here is a subheading"),
-    p("This website will be to help planners assess potential windfarm development areas in Cumbria, and achieve a" ,strong("balance"), "between different interest groups and other users."))
+    p("This website will be to help planners assess potential windfarm development areas in Cumbria, and achieve a" ,strong("balance"), "between different",em("interest groups"),
+"and other users."))
     
 )
 
