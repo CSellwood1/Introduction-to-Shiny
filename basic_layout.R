@@ -10,7 +10,10 @@ ui <- fluidPage(
   titlePanel("title panel"),
   
   sidebarLayout(
-    sidebarPanel("sidebar panel"),
+    sidebarPanel("sidebar panel",
+                 h3("a button"),
+                 actionButton(inputId = "my_submitstatus", label = "Submit")
+                 ),
     mainPanel("main panel"), position = c("right")),
   mainPanel(
     h1("This is the main heading for my app"),
