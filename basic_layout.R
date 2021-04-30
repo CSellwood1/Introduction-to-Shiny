@@ -43,7 +43,7 @@ img(src=wfarm)
 
 # Define server logic ----
 server <- function(input, output) {
-  output$habitats_plot <- renderPlot(hist(habitats[, as.numeric(input$selection_group)]))
+  output$habitats_plot <- renderPlot(hist(habitats[, as.numeric(input$selection_group)], ylab = "Frequency of land cover", xlab = "Proportion of 10km grid cells occupied by habitat type", main = paste("Aggregated frequency histogram of habitat class coverage in GB")))
   
 }
 
