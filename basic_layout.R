@@ -37,7 +37,10 @@ img(src=wfarm)
 )
 
 # Define server logic ----
-server <- function(input, output) {}
+server <- function(input, output) {
+  output$habitats_plot <- renderPlot(hist(habitats[,1]))
+  
+}
 
 # Run the app ----
 shinyApp(ui = ui, server = server)
