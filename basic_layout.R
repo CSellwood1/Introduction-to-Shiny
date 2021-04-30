@@ -16,8 +16,8 @@ ui <- fluidPage(
     sidebarPanel("sidebar panel",
                  h3("a button"),
                  actionButton(inputId = "my_submitstatus", label = "Submit"),
-    checkboxGroupInput(inputId = "my_checkgroup", 
-                       h3("Checkbox group"), 
+    radioButtons(inputId = "selection_group", 
+                       h3("Select a habitat"), 
                        choices = list("Woodland" = 1, 
                                       "Grassland" = 2, 
                                       "Urban" = 3),
@@ -38,7 +38,7 @@ img(src=wfarm)
 
 # Define server logic ----
 server <- function(input, output) {
-  output$habitats_plot <- renderPlot(hist(habitats[, as.numeric(input$my_checkgroup)]))
+  output$habitats_plot <- renderPlot(hist(habitats[, as.numeric(input$selection_group)]))
   
 }
 
