@@ -38,7 +38,7 @@ img(src=wfarm)
 
 # Define server logic ----
 server <- function(input, output) {
-  output$habitats_plot <- renderPlot(hist(habitats[,1]))
+  output$habitats_plot <- renderPlot(hist(habitats[, as.numeric(input$my_checkgroup)]))
   
 }
 
