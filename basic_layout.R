@@ -21,7 +21,12 @@ ui <- fluidPage(
                        choices = list("Woodland" = 1, 
                                       "Grassland" = 2, 
                                       "Urban" = 3),
-                       selected = 1)),
+                       selected = 1),
+    sliderInput("bins",
+                "Bin number:",
+                min = 1,
+                max = 100,
+                value = 30)),
     
     mainPanel("main panel"), position = c("right")),
   mainPanel(
