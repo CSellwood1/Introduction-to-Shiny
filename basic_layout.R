@@ -3,6 +3,9 @@ library(shiny)
 
 #read an image in
 wfarm <- base64enc::dataURI(file="www/UKwindfarm.png", mime="image/png")#add it to ui to print it
+#read in a csv of habitat cover in GB
+habitats<- read.csv("C:\\Users\\nick\\Documents\\Newcastle\\Fourth Year\\BIO8068 Management and Visualisation of Data\\Introduction-to-Shiny\\www\\habitats.csv")
+
 
 # Define UI ----
 ui <- fluidPage(
@@ -25,7 +28,10 @@ ui <- fluidPage(
     h1("This is the main heading for my app"),
     h2("here is a subheading"),
     p("This website will be to help planners assess potential windfarm development areas in Cumbria, and achieve a" ,strong("balance"), "between different",em("interest groups"),
-"and other users.")),
+"and other users."),
+
+plotOutput(outputId = "habitats_plot")
+),
 #add image
 img(src=wfarm)
 )
